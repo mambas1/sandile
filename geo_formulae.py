@@ -31,7 +31,7 @@ def volume_sphere(r):
     return 4*22*r*r*r/21
 def area_circle(r):
     """
-    calculates the area of a circle
+    calculates the area of a circle given the radius
     :param r: r is the radius of the circle
     :return:area of the circle in units^2 of the radius
     >>>area_circle(7)
