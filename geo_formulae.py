@@ -14,148 +14,148 @@ def triangle_area(base, height):
     return (1/2)*base*height
 
 
-def area_triangle(a, b, theta):
+def area_triangle(side1, side2, theta):
     """
     this too calculates the area of a triangle using two sides of the triangle and the angle the two lines form.
-    :param a: one side of the triangle.
-    :param b:another side of the triangle.
+    :param side1: length of one side of the triangle.
+    :param side2: length of another side of the triangle.
     :param theta: the interior angle formed by the two lines measured in degrees.
-    :return: the area of the triangle, (units are units of side a*units of side b).
+    :return: the area of the triangle, (units are units of side1*units of side2).
     >>>area_triangle(2, 3, 90)
     3
     """
-    return a*b*sin(math.radians(theta))/2
+    return side1*side2*sin(math.radians(theta))/2
 
 
-def circumference(r):
+def circumference(radius):
     """
     calculates the distance around a circle called circumference using the radius of the circle.
-    :param r: radius of the circle.
+    :param radius: radius length.
     :return:the distance around a circle(units are the same as those of radius).
     >>>circumference(7)
     44
     """
-    return 2*(22/7)*r
+    return 2*(22/7)*radius
 
 
-def circum_ference(d):
+def circum_ference(diameter):
     """
     it also calculates the circumference using the diameter.
-    :param d: diameter of the circle.
-    :return: returns the circumference using units of the diameter.
+    :param diameter: diameter length of the circle.
+    :return: returns the circumference using units of the diameter's length.
     >>>circum_ference(14)
     44
     """
-    return 22*d/7
+    return 22*diameter/7
 
 
-def volume_sphere(r):
+def volume_sphere(radius):
     """
     calculates the volume of a sphere.
-    :param r: is the radius of the sphere.
+    :param radius: is the radius length of the sphere.
     :return:volume of the sphere in units^3 of the radius.
     >>>volume_sphere(2)
     33.524 (rounded to nearest 3 decimal places).
     """
-    return 4*22*r*r*r/21
+    return 4*22*radius*radius*radius/21
 
 
-def area_circle(r):
+def area_circle(radius):
     """
-    calculates the area of a circle given the radius.
-    :param r: is the radius of the circle.
+    calculates the area of a circle given the radius length.
+    :param radius: is the radius length of the circle.
     :return:area of the circle in units^2 of the radius.
     >>>area_circle(7)
     154
     """
-    return (22/7)*r*r
+    return (22/7)*radius*radius
 
 
-def volume_cylinder(r, h):
+def volume_cylinder(radius, height):
     """
     calculates the volume of a cylinder.
-    :param r: the radius of the circular part of the cylinder.
-    :param h: is the perpendicular distance to the circular part from the bottom to the top of the cylinder.
+    :param radius: the radius length of the circular part of the cylinder.
+    :param height: is the perpendicular distance to the circular part from the bottom to the top of the cylinder.
     :return:volume of the cylinder (units of the radius*units of the height).
     >>>volume_cylinder(7,2)
     308
     """
-    return (22/7)*r*r*h
+    return (22/7)*radius*radius*height
 
 
-def arc_length(r, theta):
+def arc_length(radius, theta):
     """
     calculates the area of an arc, when the radius of the arc and the angle subtended by the arc is known.
-    :param r: the radius of the arc.
-    :param theta: angle subtended by the arc.
+    :param radius: the radius length of the arc.
+    :param theta: angle subtended by the arc in degrees.
     :return: the length of the arc in units of the radius.
     >>>arc_length(7,90)
     11
     """
-    return 11*theta*r/630
+    return 11*theta*radius/630
 
 
-def volume_cuboid(l, b, h):
+def volume_cuboid(length, breath, height):
     """
     calculates the volume of a cuboid
-    :param l: the length which is the distance of one of the edges of the cuboid.
-    :param b: length of the breath of the cuboid.
-    :param h: height of the cuboid.
+    :param length: the length which is the distance of one of the edges of the cuboid.
+    :param breath: length of the breath of the cuboid.
+    :param height: height of the cuboid.
     :return: the volume of the cuboid,in units of (length units*breath units*height unit).
     >>>volume_cuboid(2,3,4)
     24
     """
-    return l*b*h
+    return length*breath*height
 
 
-def surface_area_cuboid(l, b, h):
+def surface_area_cuboid(length, breath, height):
     """
     calculates the surface area of a cuboid using the three sides of the cube.
-    :param l: length of the cuboid.
-    :param b: breath of the cuboid.
-    :param h: height of the cuboid.
+    :param length: length of the cuboid.
+    :param breath: breath of the cuboid.
+    :param height: height of the cuboid.
     :return: volume of the cuboid in units of length units*base units*height units.
     >>>surface_area_cuboid(2,3,4)
     52
     """
-    return 2*(l*(b+h)+b*h)
+    return 2*(length*(breath+height)+breath*height)
 
 
-def area_parallelogram(h, b):
+def area_parallelogram(height, breath):
     """
-    calculates the area of a parallelogram
-    :param h: height that is perpendicular to the base of the parallelogram
-    :param b: base of the parallelogram
-    :return:area of a parallelogram in height units*length units
+    calculates the area of a parallelogram.
+    :param height: length of the height that is perpendicular to the base of the parallelogram.
+    :param breath: length of the base of the parallelogram.
+    :return:area of a parallelogram in units of height units*length units.
     >>>area_parallelogram(2,4)
     8
     """
-    return b*h
+    return breath*height
 
 
-def volume_cone(r, h):
+def volume_cone(radius, height):
     """
-    calculates the volume of a cone
-    :param r: the radius of the circular part of the cone
-    :param h: is the perpendicular height from the center of circle making the cone to the peak of the  cone.
+    calculates the volume of a cone.
+    :param radius: the radius length of the circular part of the cone.
+    :param height: is the perpendicular length of the height from the center of circle making the cone to the peak of the  cone.
     >>>volume_cone(7,3)
-    77
-    :return:the volume of the cone in height units*radius units*radius units
+    154
+    :return:the volume of the cone ( in units of, height units*radius units*radius units
     """
-    return (22/7)*r*r*h/3
+    return (22/7)*radius*radius*height/3
 
 
-def volume_right_pyramid(l, w, h):
+def volume_right_pyramid(length, width, height):
     """
-    calculates the volume of a square based pyramid
-    :param l: the base length
-    :param w: the base width
-    :param h: the pyramid height
-    :return: the volume of the pyramid in base length units*base width units*pyramid height units
+    calculates the volume of a square based pyramid.
+    :param length: the base length.
+    :param width: the base width.
+    :param height: the pyramid height.
+    :return: the volume of the pyramid in base length units*base width units*pyramid height units.
     >>>volume_right_pyramid(2,3,4)
-    24
+    8
     """
-    return l*w*h/3
+    return length*width*height/3
 if __name__ == "__main__":
     print("area:",
           triangle_area(2, 3))
