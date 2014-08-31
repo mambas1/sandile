@@ -16,9 +16,9 @@ def circumference(r):
     :param r: radius of the circle
     :return:the distance around a circle(units are the same as those of radius
     >>>circumference(7)
-    22
+    44
     """
-    return 2*pi*r
+    return 2*(22/7)*r
     print(circumference(7))
 def volume_sphere(r):
     """
@@ -28,7 +28,7 @@ def volume_sphere(r):
     >>>volume_sphere(2)
     33.524 (rounded to nearest 3 decimal places)
     """
-    return (4/3)*(pi*r*r*r)
+    return 4*22*r*r*r/21
 def area_circle(r):
     """
     calculates the area of a circle
@@ -37,7 +37,7 @@ def area_circle(r):
     >>>area_circle(7)
     154
     """
-    return pi*r*r
+    return (22/7)*r*r
 def volume_cylinder(r,h):
     """
     calculates the volume of a cylinder
@@ -47,7 +47,7 @@ def volume_cylinder(r,h):
     >>>volume_cylinder(7,2)
     304
     """
-    return pi*r*r*h
+    return (22/7)*r*r*h
 def arc_length(r,theta):
     """
     calculates the area of an arc, when the radius of the arc and the angle subtended by the arc is known
@@ -57,7 +57,7 @@ def arc_length(r,theta):
     >>>arc_length(7,90)
     11
     """
-    return 2*pi*theta*r/360
+    return 11*theta*r/630
 def volume_cuboid(l,b,h):
     """
     calculates the volume of a cuboid
@@ -99,7 +99,7 @@ def volume_cone(r,h):
     77
     :return:the volume of the cone in height units*radius units*radius units
     """
-    return pi*r*r*h/3
+    return (22/7)*r*r*h/3
 def volume_right_pyramid(l,w,h):
     """
     calculates the volume of a square based pyramid
