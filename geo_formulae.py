@@ -28,7 +28,7 @@ def volume_sphere(r):
     >>>volume_sphere(2)
     33.524 (rounded to nearest 3 decimal places)
     """
-    return (4/3)*(pi*r^3)
+    return (4/3)*(pi*r*r*r)
 def area_circle(r):
     """
     calculates the area of a circle
@@ -48,13 +48,13 @@ def volume_cylinder(r,h):
     304
     """
     return pi*r*r*h
-def arc_lenght(r,theta):
+def arc_length(r,theta):
     """
     calculates the area of an arc, when the radius of the arc and the angle subtended by the arc is known
     :param r: the radius of the arc
     :param theta: angle subtended by the arc
     :return: the length of the arc in units of the radius
-    >>>arc_lenght(7,90)
+    >>>arc_length(7,90)
     11
     """
     return 2*pi*theta*r/360
@@ -79,7 +79,7 @@ def surface_area_cuboid(l,b,h):
     >>>surface_area_cuboid(2,3,4)
     40
     """
-    return 2*l(2*b+b)
+    return l*(b+h)+b*h
 def area_parallelogram(h,b):
     """
     calculates the area of a parallelogram
@@ -107,7 +107,28 @@ def volume_right_pyramid(l,w,h):
     :param w: the base width
     :param h: the pyramid height
     :return: the volume of the pyramid in base length units*base width units*pyramid height units
-    >>>volume_right_pyramid(2,3,24)
+    >>>volume_right_pyramid(2,3,4)
     24
     """
     return l*w*h/3
+if __name__ == "__main__":
+    print("area:",
+          triangle_area(2,3))
+    print("circumference:",
+          circumference(7))
+    print("volume_sphere:",
+          volume_sphere(2))
+    print("are_circle:",
+          area_circle(7))
+    print("volume_cylinder:",
+          volume_cylinder(7,2))
+    print("arc_length:",
+          arc_length(7,90))
+    print("volume_cuboid:",
+          volume_cuboid(2,3,4))
+    print("surface_area_cuboid:",
+          surface_area_cuboid(2,3,4))
+    print("volume_cone:",
+          volume_cone(7,3))
+    print("volume_right_pyramid:",
+          volume_right_pyramid(2,3,4))
