@@ -130,7 +130,18 @@ def area_parallelogram(height, breath):
     >>> area_parallelogram(2,4)
     8
     """
-    return breath*height
+    if not isinstance(height, (int,float)):
+        raise TypeError("height should be a number")
+    elif not height > 0:
+        raise ValueError("height must be greater that 0")
+    elif height is None:
+        raise AttributeError("put a val;ue of height")
+    elif not isinstance(breath, (int,float)):
+        raise TypeError("height should be number")
+    elif not breath > 0:
+        raise ValueError("put a value of height")
+    else:
+        return breath*height
 
 
 def volume_cone(radius, height):
