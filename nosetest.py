@@ -1,5 +1,5 @@
 __author__ = 'sandile'
-from geom.formulae import*
+from geo_formulae import*
 from nose.tools import *
 
 @raises(TypeError)
