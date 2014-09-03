@@ -1,6 +1,7 @@
 __author__ = 'sandile'
-from geo_formulae import*
+from geom_formulae import*
 from nose.tools import *
+
 
 @raises(TypeError)
 def triangle_area_other():
